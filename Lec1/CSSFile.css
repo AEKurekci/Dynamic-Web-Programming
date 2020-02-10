@@ -1,0 +1,47 @@
+p{
+    font-family: sans-serif;
+    color : blueviolet;    
+    font-size: 25px;
+    
+}
+/*
+comment line
+*/
+h1, h3{
+    font-style: italic;
+    color: brown;
+    font-size: 25pt;
+}
+/*
+overriding
+*/
+h3{
+    background-color: aqua;
+    text-align: center;
+}
+
+blockquote{
+    text-align: justify;
+}
+
+h2{
+    text-decoration: overline;
+    text-shadow: 2px gray;
+}
+
+body{
+    background-image: url("images/rabbit.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+head{
+    background-color: brown;
+}
+/*
+In any tag we can use classes(<p> <h1> so on)
+with classes we specified our tags
+*/
+.firstClass{
+    font-weight: bold;
+}
+
