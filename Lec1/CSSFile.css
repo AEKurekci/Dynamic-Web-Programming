@@ -23,6 +23,11 @@ h3{
 blockquote{
     text-align: justify;
 }
+h4{
+    padding: 20px;
+    background-color: yellow;
+    margin-left: 50pt;
+}
 
 h2{
     text-decoration: overline;
@@ -43,5 +48,8 @@ with classes we specified our tags
 */
 .firstClass{
     font-weight: bold;
+}
+.secondClass{
+    background-color: yellowgreen;
 }
 
