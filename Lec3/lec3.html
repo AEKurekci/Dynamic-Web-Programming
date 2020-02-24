@@ -14,6 +14,9 @@
     <p id="par4"></p>
     <p id="par5"></p>
     <p id="par6"></p>
+    <p id="par7"></p>
+    <p id="par8"></p>
+    <p id="par9"></p>
 
     <button type="button" onclick="document.getElementById('par1').innerText = 'Clicked'">Click</button>
 
@@ -29,11 +32,22 @@
 
     <button type="button" onclick="document.getElementById('par6').innerHTML = selectionSort(numbers)">Selection Sort</button>
     
-    <button type="button" onclick="document.getElementById('par6').innerHTML = findIndexOfSmallest(numbers, 6)">Smallest Index</button>
+    <button type="button" onclick="document.getElementById('par7').innerHTML = findIndexOfSmallest(numbers, 6)">Smallest Index</button>
+
+    <button type="button" onclick="document.getElementById('par8').innerHTML = push(numbers, 22)">push 22</button>
+
+    <button type="button" onclick="document.getElementById('par8').innerHTML = replaceAll(forReplace, 'a','x')">Replace All</button>
 
     <script>
         var numbers = [3,5,2,7,8,1,10,9,12,-2,23];
         var originalText = document.getElementById('par1').innerHTML;
+        var name = "Ali Emre";
+        var indName = name.indexOf("E");
+        var name2 = "Ali,Emre,Kürekci";
+        var subtxt = name2.substring(4,8);
+        var subtxt2 = name2.substr(4,4);
+
+        var forReplace = "banana";
         function backText(elementID){
             return elementID;
         }        

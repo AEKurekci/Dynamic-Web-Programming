@@ -39,5 +39,23 @@ function selectionSort(list){
         list[i] = smallest;
         list[smallestindex] = swap;
     }
-    return list
+    return list;
+}
+
+function pop(list){
+    return list[-1];
+}
+
+function push(list, elem){
+    list[list.length] = elem
+    return list;
+}
+
+function replaceAll(stringEx, letter1, letter2){
+    for(var i = 0; i < stringEx.length; i++){
+        if(stringEx[i] == letter1){
+            stringEx = stringEx.replace(letter1,letter2);
+        }
+    }
+    return stringEx;
 }
