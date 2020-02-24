@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript2</title>
+</head>
+<body>
+    <script src="myjavascript.js"></script>
+    <p id="par1">Lecture 3</p>
+    <p id="par2"></p>
+    <p id="par3"></p>
+    <p id="par4"></p>
+    <p id="par5"></p>
+    <p id="par6"></p>
+
+    <button type="button" onclick="document.getElementById('par1').innerText = 'Clicked'">Click</button>
+
+    <button type="button" onclick="document.getElementById('par1').innerText = originalText">Back</button>
+
+    <button type="button" onclick="document.getElementById('par2').innerText = backText('Selam')">Selam Ver</button>
+
+    <button type="button" onclick="document.getElementById('par3').innerHTML = sum(5,8)">Sum</button>
+
+    <button type="button" onclick="document.getElementById('par4').innerHTML = sumOfArrays(numbers)">Sum Of Arrays</button>
+
+    <button type="button" onclick="document.getElementById('par5').innerHTML = findSmallest(numbers)">Find Smallest</button>
+
+    <button type="button" onclick="document.getElementById('par6').innerHTML = selectionSort(numbers)">Selection Sort</button>
+    
+    <button type="button" onclick="document.getElementById('par6').innerHTML = findIndexOfSmallest(numbers, 6)">Smallest Index</button>
+
+    <script>
+        var numbers = [3,5,2,7,8,1,10,9,12,-2,23];
+        var originalText = document.getElementById('par1').innerHTML;
+        function backText(elementID){
+            return elementID;
+        }        
+    </script>
+</body>
+</html>
