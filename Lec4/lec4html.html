@@ -19,5 +19,29 @@
     <button type="button" onclick="document.getElementById('p1Result').innerHTML = printOnebyOne(splitText(document.getElementById('pNames').innerHTML, ','),'<br>')">Get Names</button>
 
     <button type="button" onclick="document.getElementById('p2Result').innerHTML = printOnebyOne(splitText(document.getElementById('pGrades').innerHTML, ' '),'<br>')">Get Grades</button>
+
+    <p id="p3Result"></p>
+    <button type="button" onclick="document.getElementById('p3Result').innerHTML = studentAli.ToString();">The Student</button>
+    
+    <p id="p4Result"></p>
+    <button type="button" onclick="document.getElementById('p4Result').innerHTML = studentAli.Average();">Student's average</button>
+    
+    <form>
+        <label for="fname">Name: </label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="fgrade">Grade:</label><br>
+        <input type="text" id="fgrade" name="fgrade"><br>
+
+        <button type="button" onclick="students.push(new student(document.getElementById('fname').value, splitText(document.getElementById('fgrade').value, ',')))">Save</button>
+        <button type="button" onclick="document.getElementById('fname').value = ''; document.getElementById('fgrade').value = ''">Clear</button>
+        <button type="button" onclick="document.getElementById('p5Result').innerHTML = students[0].GetName()">List All</button>
+    </form>
+
+    <p id="p5Result"></p>
+
+    <script>
+        var studentAli = new student("Ali",splitText(document.getElementById('pGrades').innerHTML, ' '));
+
+    </script>
 </body>
 </html>
