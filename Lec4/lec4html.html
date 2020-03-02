@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="lec4Script.js"></script>
+    <p><b>Names</b></p>
+    <p id="pNames">Ali, Emre, Kürekci,Mehmet,Nahırsüren, Melih, Önbey, Halil,İbrahim,Akboğa</p>
+    <p id="p1Result"></p>
+
+    <p><b>Grades</b></p>
+    <p id="pGrades">50 60 45 95 80 55 78 63 54 15</p>
+    <p id="p2Result"></p>
+    
+    <button type="button" onclick="document.getElementById('p1Result').innerHTML = printOnebyOne(splitText(document.getElementById('pNames').innerHTML, ','),'<br>')">Get Names</button>
+
+    <button type="button" onclick="document.getElementById('p2Result').innerHTML = printOnebyOne(splitText(document.getElementById('pGrades').innerHTML, ' '),'<br>')">Get Grades</button>
+</body>
+</html>
