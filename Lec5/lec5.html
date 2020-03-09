@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body id="body">
+    <script src="lec5.js"></script>
+    DOM : Document Object Model
+    <p id="month"></p>
+    <p id="day"></p>
+    <button type="button" onclick="document.getElementById('month').innerHTML = mydate.GetMonth()">Month</button>
+
+    <button type="button" onclick="document.getElementById('day').innerHTML = mydate.GetDay()">Day</button>
+
+    <button type="button" onclick="document.getElementById('day').innerHTML = d.getFullYear()">Day</button>
+
+    <button type="button" onclick="document.getElementById('day').innerHTML = Math.pow(8,2)">Kare</button>
+
+    <button type="button" onclick="document.getElementById('day').innerHTML = Math.round(8.6)">Round</button>
+    
+    <button type="button" onclick="document.getElementById('day').innerHTML = Math.floor(Math.random() * 10)">Random</button>
+
+    <button type="button" onclick="document.getElementById('day').innerHTML = useGlobal()">Global variable</button>
+
+    <p id="dom">Hello</p>
+    <button type="button" onclick="document.getElementById('dom').innerHTML = document.getElementById('body').childElementCount">DOM</button>
+
+    <button type="button" onclick="document.getElementById('dom').style.color = 'blue'">change style</button>
+
+    <button type="button" onclick="
+        if(document.getElementById('dom').style.visibility == 'hidden')
+        {
+            document.getElementById('dom').style.visibility = 'visible'
+        }
+        else
+        {
+            document.getElementById('dom').style.visibility = 'hidden'
+        }">
+        change visibility
+    </button>
+
+    <p id="p2" onmouseover="changeText(this)" onmouseout="backOriginal(this)">Come</p>
+
+    <p id="p1" onclick="changeColor(this)">change color randomly</p>
+
+    <button type="button" onclick = "document.getElementById(this).addEventListener('click', DisplayDate())">Event Listener</button>
+    
+    <script>
+        var d = new Date();
+        var otherDate = new Date();
+        otherDate.setFullYear(2019,03,15);
+
+        var mydate = new benimTarihim(d);
+        
+        function changeColor(id)
+        {
+            var randomNum = Math.floor(Math.random()*10);
+            var colorArray = ["red","black","gray","yellow","blue","green","purple","brown","pink","darkblue"];
+            id.style.color = colorArray[randomNum];
+        }
+
+        function changeText(id){
+            id.innerHTML = "fare üzerinde";
+        }
+
+        function backOriginal(id){
+            id.innerHTML = "üzeride değil";
+        }
+
+        function displayDate(){
+
+        }
+    </script>
+    
+</body>
+</html>

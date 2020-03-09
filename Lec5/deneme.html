@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p2" onmouseover="changeText(this)" onmouseout="backOriginal(this)">Come</p>
+
+    <p id="p1" onclick="changeColor(this)">change color randomly</p>
+
+    <button type="button" onclick = "document.getElementById(this).addEventListener('click', DisplayDate())">Event Listener</button>
+
+    <button type="button" onclick="create('p')">creater</button>
+
+    <button type="button" onclick="deleteObj('p4')">p4 ü sil</button>
+    
+    <script>
+        var counter = 3;
+        var textObj;
+        function changeColor(id)
+        {
+            var randomNum = Math.floor(Math.random()*10);
+            var colorArray = ["red","black","gray","yellow","blue","green","purple","brown","pink","darkblue"];
+            id.style.color = colorArray[randomNum];
+        }
+
+        function changeText(id){
+            id.innerHTML = "fare üzerinde";
+        }
+
+        function backOriginal(id){
+            id.innerHTML = "üzeride değil";
+        }
+
+        function create(element){
+             textObj= document.body.appendChild(document.createElement(element));
+             textObj.id = "p"+counter;
+            textObj.innerHTML = "this text was created from script code";
+            counter += 1;
+            console.log(textObj.id);
+            
+        }
+
+        function deleteObj(removedId){
+            document.getElementById(removedId).remove();
+        }
+
+
+    </script>
+</body>
+</html>
