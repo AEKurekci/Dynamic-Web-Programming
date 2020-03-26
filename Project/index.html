@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>Tuval Mobile Phone</title>
 </head>
 <body>
     <script src="mobilePhone.js"></script>
-    
-    
+    <header>
+        <nav>
+            <ul class="topMenu">
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Telefon Modelleri</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="allProducts">
+        <div class="product">
+            <img src="" alt="" class="left">
+            <div class="right">
+                <ul class="featureList">
+                    <h3 id="nameOfProduct">
+
+                    </h3>
+                    <ul class="priceUL">
+                        <li></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <!--
         ürün ekleme formu
@@ -86,7 +109,7 @@
                     document.getElementById('fBattery').value,document.getElementById('fOS').value,
                     document.getElementById('fExtra').value,document.getElementById('fOldPrice').value,
                     document.getElementById('fPrice').value,document.getElementById('fPicture').value));
-                    counter += 1;document.getElementById('ekleForm').style.visibility = 'hidden'
+                    document.getElementById('ekleForm').style.visibility = 'hidden'
                     document.getElementById('eklemeBasariliAlert').style.visibility = 'visible'">Ekle</button>
                 </td>
             </tr>
@@ -98,10 +121,64 @@
     </form>
     <script>
         var counter = 0;
-        var huaweiP10 = new phone("Huawei", "P10", "5.1inch Full HD", 32, "Kirin 960", 4, 64, 3200, "Android", "", 3500, 3000);
+        var huaweiP10 = new phone("Huawei", "P10", "5.1 inch Full HD", 32, "Kirin 960", 4, 64, 3200, "Android 9", "", 3500, 3000, "image/huaweip10.jpg");
+        var samsungS8 = new phone("Samsung", "S8", "5.8 inch Full HD", 12, "Snapdragon 835", 4, 64, 3500, "Android 9", "", 4000, 3500, "image/samsungs8.jpg");
         var phoneList = new Array();
-        phoneList[counter] = huaweiP10;
-        counter += 1;
+        phoneList.push(huaweiP10);
+        phoneList.push(samsungS8);
+
+        document.getElementById("nameOfProduct").innerHTML = phoneList[0].GetName();
+        var lengthOfList = phoneList.length;
+        for(var i=0;i< lengthOfList; i++){
+            var thePhone = phoneList[i];
+            var divProduct = document.getElementById('allProducts').appendChild(document.createElement('div'));
+            divProduct.class = 'product';
+            var imageOfProduct = divProduct.appendChild(document.createElement('img'));
+            imageOfProduct.class = 'left';
+            imageOfProduct.src = thePhone.GetPicture();
+            imageOfProduct.alt = "image/samplePhone.png";
+            var divFeatures = divProduct.appendChild(document.createElement('div'));
+            divFeatures.class = 'right';
+            var ulOfFeature = divFeatures.appendChild(document.createElement('ul'));
+            ulOfFeature.class = 'featureList';
+
+            var liName = document.createElement('li');
+            var nodeName = document.createTextNode(thePhone.GetName());
+            liName.appendChild(nodeName);
+            ulOfFeature.appendChild(liName);
+
+            var liScreen = document.createElement('li');
+            var nodeScreen = document.createTextNode(thePhone.GetScreen());
+            liScreen.appendChild(nodeScreen);
+            ulOfFeature.appendChild(liScreen);
+            
+            var liCamera = ulOfFeature.appendChild(document.createElement('li'));
+            liCamera.appendChild(thePhone.GetCamera());
+            var liCPU = ulOfFeature.appendChild(document.createElement('li'));
+            liCPU.appendChild(thePhone.GetCPU());
+            var liRam = ulOfFeature.appendChild(document.createElement('li'));
+            liRam.appendChild(thePhone.GetRam());
+            var liMemory = ulOfFeature.appendChild(document.createElement('li'));
+            liMemory.appendChild(thePhone.GetMemory());
+            var liBattery = ulOfFeature.appendChild(document.createElement('li'));
+            liBattery.appendChild(thePhone.GetBattery());
+            var liOS = ulOfFeature.appendChild(document.createElement('li'));
+            liOS.appendChild(thePhone.GetOS());
+            var liExtras = ulOfFeature.appendChild(document.createElement('li'));
+            liExtras.appendChild(thePhone.GetExtras());
+            var ulPrice = ulOfFeature.appendChild(document.createElement('ul'));
+            ulPrice.class = 'priceUL';
+            var ilOldPrice = ulPrice.appendChild(document.createElement('li'));
+            ilOldPrice.appendChild(thePhone.GetOldPrice());
+            var ilPrice = ulPrice.appendChild(document.createElement('li'));
+            ilPrice.appendChild(thePhone.GetPrice());
+            
+        }
+
+        function createInSection(element){
+            object = document.body.section.appendChild(document.createElement(element))
+            
+        }
     </script>
 </body>
 </html>
