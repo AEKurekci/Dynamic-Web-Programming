@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="mobilePhone.js"></script>
+    
+    
+
+    <!--
+        ürün ekleme formu
+    -->
+    <button type="button" onclick="document.getElementById('ekleForm').style.visibility = 'visible'">Yeni Ürün Ekle</button>
+    
+    <form id="ekleForm" autocomplete="on" style="visibility: hidden;">
+        <table id="tblEkle" style="width:50%;">
+            <tr>
+                <th>Telefon Ekle</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><label for="fBrand">Marka: </label></td>
+                <td><input type="text" id="fBrand"></td>
+            </tr>
+            <tr>
+                <td><label for="fModel">Model: </label></td>
+                <td><input type="text" id="fModel"></td>
+            </tr>
+            <tr>
+                <td><label for="fScreen">Ekran: </label></td>
+                <td><input type="text" id="fScreen"></td>
+            </tr>
+            <tr>
+                <td><label for="fCamera">Kamera: </label></td>
+                <td><input type="text" id="fCamera"></td>
+            </tr>
+            <tr>
+                <td><label for="fCPU">İşlemci: </label></td>
+                <td><input type="text" id="fCPU"></td>
+            </tr>
+            <tr>
+                <td><label for="fRAM">RAM: </label></td>
+                <td><input type="text" id="fRAM"></td>
+            </tr>
+            <tr>
+                <td><label for="fMemory">Hafıza: </label></td>
+                <td><input type="text" id="fMemory"></td>
+            </tr>
+            <tr>
+                <td><label for="fBattery">Batarya: </label></td>
+                <td><input type="text" id="fBattery"></td>
+            </tr>
+            <tr>
+                <td><label for="fOS">İşletim Sistemi: </label></td>
+                <td><input type="text" id="fOS"></td>
+            </tr>
+            <tr>
+                <td><label for="fExtra">Ekstra Özellik: </label></td>
+                <td><input type="text" id="fExtra"></td>
+            </tr>
+            <tr>
+                <td><label for="fOldPrice">Eski Fiyat: </label></td>
+                <td><input type="text" id="fOldPrice"></td>
+            </tr>
+            <tr>
+                <td><label for="fPrice">Fiyat: </label></td>
+                <td><input type="text" id="fPrice"></td>
+            </tr>
+            <tr>
+                <td><label for="fPicture">Fotoğraf Adresi: </label></td>
+                <td> <input type="text" id="fPicture"><br></td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <button type="button" onclick="phoneList.push(new phone(document.getElementById('fBrand').value,
+                    document.getElementById('fModel').value,document.getElementById('fScreen').value,
+                    document.getElementById('fCamera').value,document.getElementById('fCPU').value,
+                    document.getElementById('fRAM').value,document.getElementById('fMemory').value,
+                    document.getElementById('fBattery').value,document.getElementById('fOS').value,
+                    document.getElementById('fExtra').value,document.getElementById('fOldPrice').value,
+                    document.getElementById('fPrice').value,document.getElementById('fPicture').value));
+                    counter += 1;document.getElementById('ekleForm').style.visibility = 'hidden'
+                    document.getElementById('eklemeBasariliAlert').style.visibility = 'visible'">Ekle</button>
+                </td>
+            </tr>
+        </table>
+        <div id="eklemeBasariliAlert" class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Ürün başarılı bir şekilde eklendi!
+        </div>
+    </form>
+    <script>
+        var counter = 0;
+        var huaweiP10 = new phone("Huawei", "P10", "5.1inch Full HD", 32, "Kirin 960", 4, 64, 3200, "Android", "", 3500, 3000);
+        var phoneList = new Array();
+        phoneList[counter] = huaweiP10;
+        counter += 1;
+    </script>
+</body>
+</html>
