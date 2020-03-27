@@ -15,15 +15,17 @@
             <li><a href="#">Telefon Modelleri</a></li>
             <li><a href="#">Hakkımızda</a></li>
             <li><a href="#">İletişim</a></li>
+            <li><a href="#">Sepetim</a></li>
         </ul>
     </nav>
-    <header id="best" class="bestProduct">
+        <header id="best" class="best">
+        <h3 style="text-align: center; color: rgb(70, 57, 23);">Öne Çıkan Ürün!</h3>
         
-        
-    </header>
+        </header>
     <div class="flex-container">
         <div class="filtreleme" style="flex-grow: 2">
             <ul>
+                <h4><li>Filtrele</li></h4>
                 <li><a href="#">Marka</a></li>
                 <li><a href="#">Model</a></li>
                 <li><a href="#">Screen</a></li>
@@ -37,25 +39,14 @@
             </ul>        
         </div>
         <section id="allProducts" style="flex-grow: 3">
-            <div class="product">
-                <div class="left"><img src="" alt=""></div>
-                <div class="right">
-                    <ul class="featureList">
-                        <h3 id="nameOfProduct">
-    
-                        </h3>
-                        <ul class="priceUL">
-                            <li></li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
+            
+        </section>
     </div>
     
-        </section>
-        <section id="yeniUrunButton">
+        
+    <section id="yeniUrunButton">
     
-        </section>
+    </section>
 
     <!--
         ürün ekleme formu
@@ -63,86 +54,88 @@
     -->
     
     
-    <form id="ekleForm" autocomplete="on" style="visibility: hidden;">
-        <table id="tblEkle" style="width:50%;">
-            <tr>
-                <th>Telefon Ekle</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td><label for="fBrand">Marka: </label></td>
-                <td><input type="text" id="fBrand"></td>
-            </tr>
-            <tr>
-                <td><label for="fModel">Model: </label></td>
-                <td><input type="text" id="fModel"></td>
-            </tr>
-            <tr>
-                <td><label for="fScreen">Ekran: </label></td>
-                <td><input type="text" id="fScreen"></td>
-            </tr>
-            <tr>
-                <td><label for="fCamera">Kamera: </label></td>
-                <td><input type="text" id="fCamera"></td>
-            </tr>
-            <tr>
-                <td><label for="fCPU">İşlemci: </label></td>
-                <td><input type="text" id="fCPU"></td>
-            </tr>
-            <tr>
-                <td><label for="fRAM">RAM: </label></td>
-                <td><input type="text" id="fRAM"></td>
-            </tr>
-            <tr>
-                <td><label for="fMemory">Hafıza: </label></td>
-                <td><input type="text" id="fMemory"></td>
-            </tr>
-            <tr>
-                <td><label for="fBattery">Batarya: </label></td>
-                <td><input type="text" id="fBattery"></td>
-            </tr>
-            <tr>
-                <td><label for="fOS">İşletim Sistemi: </label></td>
-                <td><input type="text" id="fOS"></td>
-            </tr>
-            <tr>
-                <td><label for="fExtra">Ekstra Özellik: </label></td>
-                <td><input type="text" id="fExtra"></td>
-            </tr>
-            <tr>
-                <td><label for="fOldPrice">Eski Fiyat: </label></td>
-                <td><input type="text" id="fOldPrice"></td>
-            </tr>
-            <tr>
-                <td><label for="fPrice">Fiyat: </label></td>
-                <td><input type="text" id="fPrice"></td>
-            </tr>
-            <tr>
-                <td><label for="fPicture">Fotoğraf Adresi: </label></td>
-                <td> <input type="text" id="fPicture"><br></td>
-            </tr>
-            <tr>
-                <td>
-                    
-                </td>
-                <td>
-                    <button type="button" onclick="phoneList.push(new phone(document.getElementById('fBrand').value,
-                    document.getElementById('fModel').value,document.getElementById('fScreen').value,
-                    document.getElementById('fCamera').value,document.getElementById('fCPU').value,
-                    document.getElementById('fRAM').value,document.getElementById('fMemory').value,
-                    document.getElementById('fBattery').value,document.getElementById('fOS').value,
-                    document.getElementById('fExtra').value,document.getElementById('fOldPrice').value,
-                    document.getElementById('fPrice').value,document.getElementById('fPicture').value));
-                    document.getElementById('ekleForm').style.visibility = 'hidden'
-                    document.getElementById('eklemeBasariliAlert').style.visibility = 'visible'">Ekle</button>
-                </td>
-            </tr>
-        </table>
-        <div id="eklemeBasariliAlert" class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-            Ürün başarılı bir şekilde eklendi!
-        </div>
-    </form>
+    <footer>
+        <form id="ekleForm" autocomplete="on" style="visibility: hidden;">
+            <table id="tblEkle" style="width:50%;">
+                <tr>
+                    <th>Telefon Ekle</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><label for="fBrand">Marka: </label></td>
+                    <td><input type="text" id="fBrand"></td>
+                </tr>
+                <tr>
+                    <td><label for="fModel">Model: </label></td>
+                    <td><input type="text" id="fModel"></td>
+                </tr>
+                <tr>
+                    <td><label for="fScreen">Ekran: </label></td>
+                    <td><input type="text" id="fScreen"></td>
+                </tr>
+                <tr>
+                    <td><label for="fCamera">Kamera: </label></td>
+                    <td><input type="text" id="fCamera"></td>
+                </tr>
+                <tr>
+                    <td><label for="fCPU">İşlemci: </label></td>
+                    <td><input type="text" id="fCPU"></td>
+                </tr>
+                <tr>
+                    <td><label for="fRAM">RAM: </label></td>
+                    <td><input type="text" id="fRAM"></td>
+                </tr>
+                <tr>
+                    <td><label for="fMemory">Hafıza: </label></td>
+                    <td><input type="text" id="fMemory"></td>
+                </tr>
+                <tr>
+                    <td><label for="fBattery">Batarya: </label></td>
+                    <td><input type="text" id="fBattery"></td>
+                </tr>
+                <tr>
+                    <td><label for="fOS">İşletim Sistemi: </label></td>
+                    <td><input type="text" id="fOS"></td>
+                </tr>
+                <tr>
+                    <td><label for="fExtra">Ekstra Özellik: </label></td>
+                    <td><input type="text" id="fExtra"></td>
+                </tr>
+                <tr>
+                    <td><label for="fOldPrice">Eski Fiyat: </label></td>
+                    <td><input type="text" id="fOldPrice"></td>
+                </tr>
+                <tr>
+                    <td><label for="fPrice">Fiyat: </label></td>
+                    <td><input type="text" id="fPrice"></td>
+                </tr>
+                <tr>
+                    <td><label for="fPicture">Fotoğraf Adresi: </label></td>
+                    <td> <input type="text" id="fPicture"><br></td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <button type="button" onclick="phoneList.push(new phone(document.getElementById('fBrand').value,
+                        document.getElementById('fModel').value,document.getElementById('fScreen').value,
+                        document.getElementById('fCamera').value,document.getElementById('fCPU').value,
+                        document.getElementById('fRAM').value,document.getElementById('fMemory').value,
+                        document.getElementById('fBattery').value,document.getElementById('fOS').value,
+                        document.getElementById('fExtra').value,document.getElementById('fOldPrice').value,
+                        document.getElementById('fPrice').value,document.getElementById('fPicture').value));
+                        document.getElementById('ekleForm').style.visibility = 'hidden'
+                        document.getElementById('eklemeBasariliAlert').style.visibility = 'visible'">Ekle</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="eklemeBasariliAlert" class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                Ürün başarılı bir şekilde eklendi!
+            </div>
+        </form>
+    </footer>
 
     <!--
         Ürünlerin oluşturulması ve ana ekrana yerleştirilmesi
@@ -151,13 +144,105 @@
         var counter = 0;
         var huaweiP10 = new phone("Huawei", "P10", "5.1 inch Full HD", 32, "Kirin 960", 4, 64, 3200, "Android 9", "", 3500, 3000, "image/huaweip10.jpg");
         var samsungS8 = new phone("Samsung", "S8", "5.8 inch Full HD", 12, "Snapdragon 835", 4, 64, 3500, "Android 9", "", 4000, 3500, "image/samsungs8.jpg");
+        var samsungS7 = new phone("Samsung", "S7", "5.5 inch Full HD", 10, "Snapdragon 765", 4, 32, 3500, "Android 7", "", 3200, 3000, "image/samsungs7.jpg");
         var phoneList = new Array();
         phoneList.push(huaweiP10);
         phoneList.push(samsungS8);
+        phoneList.push(samsungS7);
 
         var lengthOfList = phoneList.length;
         for(var i=0;i< lengthOfList; i++){
             var thePhone = phoneList[i];
+            if(i == 0){
+                var divProduct = document.createElement('div');
+                divProduct.setAttribute('class', 'bestProduct');
+                document.getElementById('best').appendChild(divProduct);
+                
+                var divOfLeft = document.createElement('div');
+                divOfLeft.setAttribute('class', 'bestLeft');
+                divProduct.appendChild(divOfLeft);
+                var imageOfProduct = document.createElement('img');
+                imageOfProduct.src = thePhone.GetPicture();
+                divOfLeft.appendChild(imageOfProduct);
+
+                var divFeatures = document.createElement('div');
+                divFeatures.setAttribute('class', 'bestRight');
+                divProduct.appendChild(divFeatures);
+                var ulOfFeature = document.createElement('ul');
+                ulOfFeature.setAttribute('class', 'bestFeatureList');
+                divFeatures.appendChild(ulOfFeature);
+
+                var liName = document.createElement('h4');
+                var nodeName = document.createTextNode(thePhone.GetName());
+                liName.appendChild(nodeName);
+                ulOfFeature.appendChild(liName);
+
+                var liScreen = document.createElement('li');
+                var nodeScreen = document.createTextNode(thePhone.GetScreen());
+                liScreen.appendChild(nodeScreen);
+                ulOfFeature.appendChild(liScreen);
+                
+                var liCamera = document.createElement('li');
+                var nodeCamera = document.createTextNode(thePhone.GetCamera() + ' MP');            
+                liCamera.appendChild(nodeCamera);
+                ulOfFeature.appendChild(liCamera);
+
+                var liCPU = document.createElement('li');
+                var nodeCPU = document.createTextNode(thePhone.GetCPU());            
+                liCPU.appendChild(nodeCPU);
+                ulOfFeature.appendChild(liCPU);
+
+                var liRam = document.createElement('li');
+                var nodeRam = document.createTextNode(thePhone.GetRam() + ' GB');            
+                liRam.appendChild(nodeRam);
+                ulOfFeature.appendChild(liRam);
+
+                var liMemory = document.createElement('li');
+                var nodeMemory = document.createTextNode(thePhone.GetMemory() + ' GB');            
+                liMemory.appendChild(nodeMemory);
+                ulOfFeature.appendChild(liMemory);
+
+                var liBattery = document.createElement('li');
+                var nodeBattery = document.createTextNode(thePhone.GetBattery() + ' mAh');            
+                liBattery.appendChild(nodeBattery);
+                ulOfFeature.appendChild(liBattery);
+
+                var liOS = document.createElement('li');
+                var nodeOS = document.createTextNode(thePhone.GetOS());            
+                liOS.appendChild(nodeOS);
+                ulOfFeature.appendChild(liOS);
+
+                var liExtras = document.createElement('li');
+                var nodeExtras = document.createTextNode(thePhone.GetExtras());            
+                liExtras.appendChild(nodeExtras);
+                ulOfFeature.appendChild(liExtras);
+
+                var ulPrice = document.createElement('ul');    
+                ulPrice.setAttribute('class', 'bestPriceUL')     
+                ulOfFeature.appendChild(ulPrice);
+
+                var liFiyat = document.createElement('li');
+                var nodeOfFiyat = document.createTextNode('Fiyatı: ');
+                liFiyat.appendChild(nodeOfFiyat);
+                ulPrice.appendChild(liFiyat)
+
+                var liOldPrice = document.createElement('li');
+                var delTag = document.createElement('del');
+                var nodeOldPrice = document.createTextNode(thePhone.GetOldPrice() + ' ₺'); 
+                delTag.appendChild(nodeOldPrice);  
+                liOldPrice.appendChild(delTag);
+                ulPrice.appendChild(liOldPrice);
+
+                var liPrice = document.createElement('li');
+                var nodePrice = document.createTextNode('  ' + thePhone.GetPrice() + ' ₺');            
+                liPrice.appendChild(nodePrice);
+                ulPrice.appendChild(liPrice);
+
+                var liBasketButton = document.createElement('button');
+                var nodeOfBasket = document.createTextNode('İncele');
+                liBasketButton.appendChild(nodeOfBasket);
+                ulPrice.appendChild(liBasketButton);
+            }
             var divProduct = document.createElement('div');
             divProduct.setAttribute('class', 'product');
             document.getElementById('allProducts').appendChild(divProduct);
@@ -176,7 +261,7 @@
             ulOfFeature.setAttribute('class', 'featureList');
             divFeatures.appendChild(ulOfFeature);
 
-            var liName = document.createElement('li');
+            var liName = document.createElement('h4');
             var nodeName = document.createTextNode(thePhone.GetName());
             liName.appendChild(nodeName);
             ulOfFeature.appendChild(liName);
