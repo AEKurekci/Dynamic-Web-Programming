@@ -19,41 +19,99 @@
 .closebtn:hover {
     color: black;
 }
+
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+/*üst panel*/
 nav{
     text-align:center;
     background-color: #39443a;
-    padding: 10px 20px ;
+    padding: 10px 0px;
 }
 ul.topMenu li{
     list-style: none;
     display: inline;
     font-size: 24px;
-    margin-left: 50px;
 }
 
-a{
+ul.topMenu li a{
     text-decoration: none;
-    color: #718873;
+    color:#445746 ;
+    background-color: #4f7553;
+    padding: 25px;
 }
-a:hover{
-    color: #445746;
+ul.topMenu li a:hover{
+    color:#718873;
+    background-color: #445746;
 }
+ul.topMenu a img{
+    width: 10%;
+    padding:0px;
+    margin-right: 200px;
+    background-color: none;
+    color: none;
+}
+ul.topMenu a:hover img{
+    color:none;
+    background-color: none;
+}
+/* best Product*/
+
+.bestProduct{
+    margin:0px;
+    background-color: #7e9e81;
+    padding: 50px;
+}
+/* container */
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: flex-start;
+}
+
+/*filtreleme bölümü*/
+
+.filtreleme{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: #739e77;
+    margin-right: 3px;
+}
+.filtreleme ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.filtreleme li{
+    list-style: none;
+}
+.filtreleme li a{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    padding: 20px 0px;
+}
+.filtreleme li a:hover{
+    background-color: #465848;
+}
+
+/* ürün listesi*/
+section{
+    background-color: rgb(224, 218, 230);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
 ul.featureList li{
     list-style: none;
     font-size: 15px;
-    
 }
-ul.featureList ul.priceUL li{
+ul.priceUL li{
     display: inline;
-}
-
-section{
-    background-color: rgb(224, 218, 230);
-    margin: 40px 100px;
 }
 
 .product{
@@ -70,4 +128,19 @@ ul.featureList li{
     list-style: none;
     font-size: medium;
     color: #718873;
+}
+.right{
+    float: right;
+    height: 100%;
+    background-color: aqua;
+    width: 65%;
+}
+
+.left img{
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: brown;
+    border-radius: 5px;
+    border:1px solid #3b3d3b;
 }
