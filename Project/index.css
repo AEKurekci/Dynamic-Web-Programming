@@ -200,3 +200,65 @@ ul.featureList li{
 ul.priceUL li{
     display: inline;
 }
+/*footer*/
+footer{
+    background-color: #888f88;
+    display: flex;
+    flex-direction: column;
+}
+
+/*sepetim kısmı*/
+.sepet{
+    display: flex;
+    flex-direction: column;
+    margin-left:20px;
+    margin-right: 20px;
+    height: auto;
+    border: 1px solid #2f4731;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.productInBasket{
+    display: flex;
+    flex-direction: row;
+    background-color: #889b8b75;
+}
+.photoOfBasket{
+    width: 10%;
+    margin:10px;
+    margin-right: 25px;
+}
+.productInBasket ul{
+    list-style: none;
+    width: 80%;
+}
+.deleteFromBasket{
+    background-color: rgb(153, 86, 86);
+    height: 20%;
+    align-self: center;
+    
+}
+.payButtons{
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+
+
+/* yeni ürün ekleme*/
+
+
+.newProduct{
+    height: auto;
+}
+.newProductButton{
+    text-align: center;
+}
+
+form{
+    margin-left:20px;
+    margin-right: 20px;
+    border: 1px solid #2b2e2b;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
