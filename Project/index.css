@@ -1,6 +1,6 @@
 .alert {
     padding: 20px;
-    background-color: #26a030; /* Red */
+    background-color: #26a030; 
     color: white;
     margin-bottom: 15px;
     visibility: hidden;
@@ -23,12 +23,25 @@
 
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #c9ccc5;
+    background-image: url("image/background3.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+button{
+    border: none;
+    padding: 10px 40px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: #3fa4b1;
+}
+button:hover{
+    background-color: #60c8d6;
 }
 /*üst panel*/
 nav{
     text-align:center;
-    background-color: #39443a;
+    background-color: #2d4769cb;
     padding: 10px 0px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -36,20 +49,19 @@ nav{
 ul.topMenu li{
     list-style: none;
     display: inline;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 ul.topMenu li a{
     text-decoration: none;
-    color:#445746 ;
-    background-color: #99b69c96;
+    color:#164077 ;
+    background-color: #1172b3e3;
     padding: 25px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 ul.topMenu li a:hover{
-    color:#718873;
-    background-color: #445746;
+    background-color: #2eadf796;
 }
 ul.topMenu a img{
     width: 10%;
@@ -69,7 +81,7 @@ ul.topMenu a:hover img{
 .best{
     display: flex;
     flex-direction: column;
-    background-color: #9eb4a1;
+    background-color: #475566da;
     padding: 50px;
     border: 1px solid #2b2e2b;
     border-top-left-radius: 15px;
@@ -91,7 +103,7 @@ ul.topMenu a:hover img{
       }
 }
 .bestProduct{
-    padding:5px 10px;
+    padding:0px;
 }
 .bestLeft img{
     float: left;
@@ -103,6 +115,14 @@ ul.topMenu a:hover img{
 .bestRight{
     float: right;
     width: 60%;
+    border: 1px solid #030e1b;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background-color: #3b526dda;
+}
+
+.bestRight button{
+    margin-left: 10px;
 }
 
 ul.bestFeatureList li{
@@ -138,7 +158,7 @@ ul.bestPriceUL li{
     display: flex;
     flex-direction: column;
     height: auto;
-    background-color: #2f4731;
+    background-color: #03407adc;
     margin-right: 3px;
 }
 .filtreleme ul{
@@ -157,7 +177,7 @@ ul.bestPriceUL li{
     padding: 20px 0px;
 }
 .filtreleme li a:hover{
-    background-color: #595f59;
+    background-color: #999c99;
 }
 
 
@@ -186,12 +206,17 @@ ul.bestPriceUL li{
 .right{
     float: right;
     width: 75%;
+    background-color: #317099d7;
+    border-top-right-radius: 15px;
+}
+.right button{
+    margin-left: 10px;
 }
 
 ul.featureList li{
     list-style: disc;
     font-size: medium;
-    color: #2b2e2b;
+    color: #9cb3b1;
 }
 .priceUL{
     padding-left: 0px;
@@ -202,7 +227,6 @@ ul.priceUL li{
 }
 /*footer*/
 footer{
-    background-color: #888f88;
     display: flex;
     flex-direction: column;
 }
@@ -211,6 +235,7 @@ footer{
 .sepet{
     display: flex;
     flex-direction: column;
+    background-color: #a8c3dde5;
     margin-left:20px;
     margin-right: 20px;
     height: auto;
@@ -221,7 +246,8 @@ footer{
 .productInBasket{
     display: flex;
     flex-direction: row;
-    background-color: #889b8b75;
+    background-color: #296acad5;
+    border-bottom: 1px solid #132527;
 }
 .photoOfBasket{
     width: 10%;
@@ -233,15 +259,26 @@ footer{
     width: 80%;
 }
 .deleteFromBasket{
-    background-color: rgb(153, 86, 86);
+    background-color: #8a1717;
     height: 20%;
     align-self: center;
     
 }
+.deleteFromBasket:hover{
+    background-color: #8b3939;
+}
+
+/* ödeme */
+.payment{
+    background-color: #093c66;
+    text-align: center;
+    visibility: hidden;
+}
+
 .payButtons{
     display: flex;
     flex-direction: row-reverse;
-    
+    margin-top: 25px;
 }
 
 
@@ -253,6 +290,7 @@ footer{
 }
 .newProductButton{
     text-align: center;
+    background-color: #1e535a;
 }
 
 form{
@@ -261,4 +299,5 @@ form{
     border: 1px solid #2b2e2b;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    background-color: #badadf;
 }

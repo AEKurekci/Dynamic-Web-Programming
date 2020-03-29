@@ -19,7 +19,7 @@
         </ul>
     </nav>
         <header id="best" class="best">
-        <h3 style="text-align: center; color: rgb(70, 57, 23);">Öne Çıkan Ürün!</h3>
+        <h3 style="text-align: center; color: rgb(158, 168, 187);">Öne Çıkan Ürün!</h3>
         
         </header>
     <div class="flex-container">
@@ -65,15 +65,15 @@
 
         <div id="buyDiv" class="payButtons">
             <button id="buy" onclick="document.getElementById('paymentType').style.visibility='visible'">Satın Al</button> 
-            <button id="continue">Alışverişe Devam Et</button> 
+            <button id="continue" style="margin-right: 20px;">Alışverişe Devam Et</button> 
         </div>
 
-        <div id="paymentType" style="visibility: hidden;">
+        <div id="paymentType" class="payment">
             <h5>Ödeme Tipini Seçiniz</h5>
             <input type="radio" id="wire" name="odeme">
             <label for="wire">Elektronik Transfer</label><br>
-            <input type="radio" id="credit" name="odeme">
-            <label for="credit">Kredi Kartı</label><br>
+            <input type="radio" id="credit" name="odeme" >
+            <label for="credit" style="margin-right: 65px;">Kredi Kartı</label><br>
             
             <button type="button" onclick="document.getElementById('odemeBasariliAlert').style.visibility = 'visible';
             document.getElementById('paymentType').style.visibility = 'hidden';
@@ -94,7 +94,6 @@
             </div>
             <!--
                 ürün ekleme formu
-            <button type="button" onclick="document.getElementById('ekleForm').style.visibility = 'visible'">Yeni Ürün Ekle</button>
             -->
             <form id="ekleForm" autocomplete="on" style="visibility: hidden;">
                 <table id="tblEkle" style="width:50%;">
@@ -179,7 +178,7 @@
                     Ürün başarılı bir şekilde eklendi!
                 </div>
             </form>
-            <p style="text-align: center; font-size: small;">Tuval Yazılım Copyright &copy;</p>
+            <p style="background-color: beige; text-align: center; font-size: small;">Tuval Yazılım Copyright &copy;</p>
         </div>
     </footer>
 
