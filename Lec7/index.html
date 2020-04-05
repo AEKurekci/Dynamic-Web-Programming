@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <p id="demo">hello world!</p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <div>ali</div>
+    <div>emre</div>
+    <div>kürekci</div>
+    <div id="demo4"></div>
+    <div id="div1">
+        <h2>Hello World</h2>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var elements = $("#demo");
+            var allDivs = $("div")
+            //$("p.className") ile de özel olarak p ye ulaşılabilir.
+            document.getElementById("demo2").innerHTML = elements[0].innerHTML;
+            $("#demo3").text(elements[0].innerHTML);
+            var divValues = "";
+            for(var i = 0; i<allDivs.length; i++){
+                divValues +=" "+ allDivs[i].innerHTML;
+            }
+            $("#demo4").text(divValues);
+            var div1 = $("#div1");
+            div1.html("<p>Hello Again</p>")
+            //div1.hide() div1.show() div1.css("font-size","35px")
+        })
+    </script>
+</body>
+</html>

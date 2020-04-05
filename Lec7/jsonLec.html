@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <h1>JSON: Javascript Object Notation</h1>
+    <p>Json Value Type: string, number, object, array, boolean, null</p>
+    <p>Jscript Value Type: string, number, object, array, boolean, null, function, date, undefined</p>
+    <p id="ex1"></p>
+    <p id="ex2"></p>
+    <p id="ex3"></p>
+    <script>
+        var obj = {"name":"Tofaş", "year":1997,"price":15000};
+        var myJsonObj = JSON.stringify(obj);
+        var myJS = JSON.parse(myJsonObj);
+
+        var emp = '{"name": "Ali", "city":"İstanbul", "birth":1997}';
+        var empJson = JSON.parse(emp);
+        $("#ex1").text(empJson.name + " " + empJson.birth);
+
+        var arrExamp = '["ali", "sümeyra"]';
+        var arrJson = JSON.parse(arrExamp);
+        $("#ex2").text(arrJson[0] + " " + arrJson[1]);
+        
+        var person = '{"name": "Ali", "city":"İstanbul", "birth":"1997-04-15"}';
+        var jsonPerson = JSON.parse(person, function(key, value){
+            if(key == "birth"){
+                return new Date(value);
+            }else{
+                return value;
+            }
+        });
+        $("#ex3").text(jsonPerson.name + " " + jsonPerson.city + " " + jsonPerson.birth);
+    </script>
+</body>
+</html>
