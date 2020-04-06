@@ -160,6 +160,7 @@ ul.bestPriceUL li{
     height: auto;
     background-color: #03407adc;
     margin-right: 3px;
+    width: 100%;
 }
 .filtreleme ul{
     list-style: none;
@@ -211,6 +212,11 @@ ul.bestPriceUL li{
 }
 .right button{
     margin-left: 10px;
+}
+
+.right a{
+    text-decoration: none;
+    color: black;
 }
 
 ul.featureList li{
@@ -276,9 +282,14 @@ footer{
 }
 
 .payButtons{
+    visibility: hidden;
     display: flex;
     flex-direction: row-reverse;
     margin-top: 25px;
+}
+.payButtons a{
+    text-decoration: none;
+    color: black;
 }
 
 
