@@ -1,0 +1,28 @@
+					Report Of Implementation An E-shopping Site
+
+
+Name and Surname: Ali Emre Kürekci
+Student ID: 160709031 
+Homework Number: HM1
+
+Problem: For a mobile-phone company, making an e-shopping site
+
+Solution: A simple e-shopping site draft is made by using HTML, CSS and Javascript
+
+Purpose: Any customer can add a mobile phone to shopping basket and add a new product. Also on left of the page, there is a filter menu for future feature of the site.
+If customer want to buy products that are in the market basket,  s/he click the 'Satın Al' button and s/he is directed to payment type selection menu and s/he can select a type
+wire transfer or credit card. Then after clicking buy button a green alert message will be displayed.
+
+Using Data Structures: Array List,Object
+
+Method Names and Their Missions: There is a class named phone. It keeps brand, model screen features, camera, CPU, RAM, memory, battery, os, extra features, old price, price, picture address informations
+of phones. The class has getter methods for all variables. Also there are some funtions named placedBest(), placedProduct(), addToBasket(). All placed methods are created to place all product to manipulated places.
+They create some element such as "div", "ul", "button"... and atributes such as "class","id" and they are appended as child each other. addToBasket() method also creates shopping basket elements and attributes, then appended
+as child each other.
+ 
+Bugs: User can add empty product writing no information on form.
+
+Program Working Process:Firstly the index.html file is connected with mobilePhone.js and index.css file. index.css file includes design informations and mobilePhone.js file includes script functions and class. 
+Then, program prints basic elements with individual ids to append other elements and these basic elements is connected css file to take design information. Some elements' visibility are hidden by default 
+such as new product form. Finally, there is script tag to add default products.
+
