@@ -10,6 +10,7 @@
     
     <?php
     error_reporting(0);
+    session_start();
         $serverName = "localhost";
         $userNameForDB = "root";
         $passwordForDB = "";
@@ -141,11 +142,12 @@
     <nav>
         <ul class="topMenu">
             <a href="index.php" ><img src="image/logo.png" alt=""></a>
+            <li style="color: #ffffff"><?php echo $_SESSION['user']?></li>
             <li><a href="index.php">Anasayfa</a></li>
             <li><a href="index.php#sepetim">Sepetim</a></li>
             <li><a href="#">Kaydol</a></li>
-            <li><a href="#">Giriş Yap</a></li>
-            <li><a href="#">Güvenli Çıkış</a></li>
+            <li><a href="userLogin.php">Giriş Yap</a></li>
+            <li><a href="logOutUser.php">Güvenli Çıkış</a></li>
         </ul>
     </nav>
 

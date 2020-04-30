@@ -28,11 +28,12 @@
     <nav>
         <ul class="topMenu">
             <a href="#" ><img src="image/logo.png" alt=""></a>
+            <li style="color: #ffffff"><?php echo $_SESSION['user']?></li>
             <li><a href="#">Anasayfa</a></li>
             <li><a href="#sepetim">Sepetim</a></li>
             <li><a href="userRegister.php">Kaydol</a></li>
-            <li><a href="#">Giriş Yap</a></li>
-            <li><a href="#">Güvenli Çıkış</a></li>
+            <li><a href="userLogin.php">Giriş Yap</a></li>
+            <li><a href="logOutUser.php">Güvenli Çıkış</a></li>
         </ul>
     </nav>
         <header id="best" class="best">
@@ -115,6 +116,7 @@
             }
             echo "var products = " . json_encode($products) . ";" ;
             $productLength = count($products);
+            $connect = null;
         ?>
         console.log(products[0].brand);
         

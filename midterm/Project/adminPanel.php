@@ -34,6 +34,7 @@
     }catch(PDOException $ex){
         print "Connection Failed" . $ex->getMessage();
     }
+    $connect = null;
 ?>
 
 <!DOCTYPE html>
