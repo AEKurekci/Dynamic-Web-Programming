@@ -21,14 +21,14 @@
                     break;
                 }
             }
-            if(!$isLogin){
-                header("Location:adminLogin.php?Login=no");
-            }
         }
         if(isset($_POST['btnDel'])){
             $delElem = $_POST['btnDel'];
             $sqlDelete = "DELETE FROM products WHERE id = '$delElem'";
             $connect->exec($sqlDelete);
+        }
+        if(!$isLogin && !isset($_SESSION['admin'])){
+            header("Location:adminLogin.php?Login=no");
         }
         
     }catch(PDOException $ex){
@@ -50,8 +50,8 @@
         <ul class="topMenu">
             <a href="#" ><img src="image/logo.png" alt=""></a>
             <li><a href="#">Ürün Listele</a></li>
-            <li><a href="adminPanel.php">Ürün Ekle</a></li>
-            <li><a href="#allProducts">Ürün Güncelle</a></li>
+            <li><a href="adminPanelAppend.php">Ürün Ekle</a></li>
+            <li><a href="#">Ürün Güncelle</a></li>
             <li><a href="logOut.php" class="btnOut">Güvenli Çıkış</a></li>
         </ul>
     </nav>

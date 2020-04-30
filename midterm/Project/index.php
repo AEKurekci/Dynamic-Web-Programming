@@ -29,10 +29,10 @@
         <ul class="topMenu">
             <a href="#" ><img src="image/logo.png" alt=""></a>
             <li><a href="#">Anasayfa</a></li>
-            <li><a href="#allProducts">Telefon Modelleri</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">İletişim</a></li>
             <li><a href="#sepetim">Sepetim</a></li>
+            <li><a href="userRegister.php">Kaydol</a></li>
+            <li><a href="#">Giriş Yap</a></li>
+            <li><a href="#">Güvenli Çıkış</a></li>
         </ul>
     </nav>
         <header id="best" class="best">

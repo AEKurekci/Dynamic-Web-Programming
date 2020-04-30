@@ -5,7 +5,9 @@
     $userName = "root";
     $password = "";
     $db = "mobilephonedb";
-    
+    if(!isset($_SESSION['admin'])){
+        header("Location:adminLogin.php?Login=no");
+    }
     try{
         $connect = new PDO("mysql:host=$server;dbname=$db",$userName,$password);
         $connect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -54,8 +56,8 @@
         <ul class="topMenu">
             <a href="adminPanel.php" ><img src="image/logo.png" alt=""></a>
             <li><a href="adminPanel.php">Ürün Listele</a></li>
-            <li><a href="#">Ürün Ekle</a></li>
-            <li><a href="#allProducts">Ürün Güncelle</a></li>
+            <li><a href="adminPanelAppend.php">Ürün Ekle</a></li>
+            <li><a href="#">Ürün Güncelle</a></li>
             <li><a href="logOut.php" class="btnOut">Güvenli Çıkış</a></li>
         </ul>
     </nav>
