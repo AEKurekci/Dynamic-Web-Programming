@@ -20,7 +20,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="styles/indexStyle.css">
     <title>Tuval Mobile Phone</title>
 </head>
 <body>
@@ -33,7 +33,9 @@
             <li><a href="#sepetim">Sepetim</a></li>
             <li><a href="userRegister.php">Kaydol</a></li>
             <li><a href="userLogin.php">Giriş Yap</a></li>
-            <li><a href="logOutUser.php">Güvenli Çıkış</a></li>
+            <li><a href="userProfil.php">Profil</a></li>
+            <li><a href="adminLogin.php">Admin Girişi</a></li>
+            <li><a href="logOutUser.php" class="btnOut">Güvenli Çıkış</a></li>
         </ul>
     </nav>
         <header id="best" class="best">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="registerStyle.css">
+    <link rel="stylesheet" href="styles/registerStyle.css">
 </head>
 <body>
     
@@ -147,7 +147,9 @@
             <li><a href="index.php#sepetim">Sepetim</a></li>
             <li><a href="#">Kaydol</a></li>
             <li><a href="userLogin.php">Giriş Yap</a></li>
-            <li><a href="logOutUser.php">Güvenli Çıkış</a></li>
+            <li><a href="userProfil.php">Profil</a></li>
+            <li><a href="adminLogin.php">Admin Girişi</a></li>
+            <li><a href="logOutUser.php" class="btnOut">Güvenli Çıkış</a></li>
         </ul>
     </nav>
 

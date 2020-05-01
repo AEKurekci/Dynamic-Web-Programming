@@ -26,6 +26,7 @@
             $delElem = $_POST['btnDel'];
             $sqlDelete = "DELETE FROM products WHERE id = '$delElem'";
             $connect->exec($sqlDelete);
+            echo "<script type='text/javascript'>alert('Ürün Silindi');</script>";
         }
         if(!$isLogin && !isset($_SESSION['admin'])){
             header("Location:adminLogin.php?Login=no");
@@ -34,7 +35,7 @@
     }catch(PDOException $ex){
         print "Connection Failed" . $ex->getMessage();
     }
-    $connect = null;
+    
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +44,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="adminStyle.css">
+    <link rel="stylesheet" href="styles/adminStyle.css">
 </head>
 <body>
     <h1>Admin Panele Hoşgeldin <?php echo $_SESSION['admin']?></h1>
@@ -91,7 +92,12 @@
                     array_push($allSearchData,$row);
                 }
                 echo "var searchData = " . json_encode($allSearchData) . ";";
+                $_SESSION['lastProducts'] = $allSearchData;
             }
+            function listProductsAfterDel(){
+
+            }
+            $connect = null;
         ?>
         function PlacedProducts(productList){
             var lengthOfSearch = productList.length;

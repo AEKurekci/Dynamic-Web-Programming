@@ -46,7 +46,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="adminStyle.css">
+    <link rel="stylesheet" href="styles/adminStyle.css">
     <script src="mobilePhone.js"></script>
 </head>
 <body>
