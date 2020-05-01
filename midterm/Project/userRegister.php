@@ -30,7 +30,7 @@
                 $nameErr = "Name is required";
             }else{
                 $name = cleanProcess($_POST['name']);
-                if(!preg_match("/^[a-zA-Z üğÜĞİşŞçÇöÖ]*$/",$name)){
+                if(!preg_match("/^[a-zA-Z üğÜĞİışŞçÇöÖ]*$/",$name)){
                     $nameErr = "Only characters and space";
                 }else{
                     $nameErr ="";
@@ -40,7 +40,7 @@
                 $surnameErr = "Surname is required";
             }else{
                 $surname = cleanProcess($_POST['surname']);
-                if(!preg_match("/^[a-zA-Z üğÜĞİşŞçÇöÖ]*$/",$surname)){
+                if(!preg_match("/^[a-zA-Z üğÜĞİışŞçÇöÖ]*$/",$surname)){
                     $surnameErr = "Only characters and space";
                 }else{
                     $surnameErr = "";
@@ -70,7 +70,7 @@
                 $userNameErr = "User Name is required";
             }else{
                 $userName = cleanProcess($_POST['userName']);
-                if(!preg_match("/^[a-zA-Z üğÜĞİşŞçÇöÖ]*$/",$userName)){
+                if(!preg_match("/^[a-zA-Z üğÜĞİışŞçÇöÖ]*$/",$userName)){
                     $userNameErr = "Only characters and space";
                 }else{
                     $userNameErr = "";

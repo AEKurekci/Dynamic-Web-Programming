@@ -13,6 +13,7 @@
     catch(PDOException $ex){
         print "Connection Failed" . $ex->getMessage();
     }
+    
 ?>
 
 <!DOCTYPE html>

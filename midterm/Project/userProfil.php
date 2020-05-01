@@ -95,7 +95,7 @@
 
                 $statement->execute();
 
-                echo $statement->rowCount()." records are Updated";
+                echo "<script type='text/javascript'>alert('Kayıt yenilendi');</script>";
             }
         }
         $currentUser = $_SESSION["user"];
