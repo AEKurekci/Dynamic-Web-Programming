@@ -127,3 +127,7 @@ section{
     padding: 15px;
     margin-left: 30px;
 }
+
+.error{
+    color:#861212;
+}

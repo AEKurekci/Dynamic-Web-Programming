@@ -53,7 +53,7 @@
             <a href="#" ><img src="image/logo.png" alt=""></a>
             <li><a href="#">Ürün Listele</a></li>
             <li><a href="adminPanelAppend.php">Ürün Ekle</a></li>
-            <li><a href="#">Ürün Güncelle</a></li>
+            <li><a href="adminPanelAppendAdmin.php" class="btnOut">Admin Ekle</a></li>
             <li><a href="logOut.php" class="btnOut">Güvenli Çıkış</a></li>
         </ul>
     </nav>
