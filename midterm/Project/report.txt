@@ -3,26 +3,113 @@
 
 Name and Surname: Ali Emre Kürekci
 Student ID: 160709031 
-Homework Number: HM1
+Homework Number: HM2
 
-Problem: For a mobile-phone company, making an e-shopping site
+Files and Methods:
 
-Solution: A simple e-shopping site draft is made by using HTML, CSS and Javascript
+adminLogin.php:
+	adminLogin.php is a file that meets admins two text input user name and password and a submit button. It controls whether an admin enters
+correct input information or not. The admin is directed to adminPanel.php file to check information. 'root' user name and 'toor' password are default information
+for entering.
 
-Purpose: Any customer can add a mobile phone to shopping basket and add a new product. Also on left of the page, there is a filter menu for future feature of the site.
-If customer want to buy products that are in the market basket,  s/he click the 'Satın Al' button and s/he is directed to payment type selection menu and s/he can select a type
-wire transfer or credit card. Then after clicking buy button a green alert message will be displayed.
+adminPanel.php:
+	adminPanel.php is the main page.In this file, If received information is correct, a session is setted up named "admin" and the admin can use admin panel. 
+If not, admin is directed back to adminLogin page to enter his/her information again. Also, If the admin can pass the first door, s/he can seach product by typing
+id, brand and/or model information. Accoridng to the search, datas stored in a javascript array to place in html elements. With the help of PlacedProducts() function,
+some table html elements such as tr, td are created and appended a table that exists in a form element and all searched data are placed into the HTML elements.
 
-Using Data Structures: Array List,Object
+AdminPanelAppend.php:
+	In this page, the admin can insert new product. There is form and some input elements and a submit button. The submit button submits all input informations to 
+database connection that exists in the same page. The biggest problem is that the admin can anter wrong information or empty input in this page. There is no any check mechanism
+in this page.
 
-Method Names and Their Missions: There is a class named phone. It keeps brand, model screen features, camera, CPU, RAM, memory, battery, os, extra features, old price, price, picture address informations
-of phones. The class has getter methods for all variables. Also there are some funtions named placedBest(), placedProduct(), addToBasket(). All placed methods are created to place all product to manipulated places.
-They create some element such as "div", "ul", "button"... and atributes such as "class","id" and they are appended as child each other. addToBasket() method also creates shopping basket elements and attributes, then appended
-as child each other.
- 
-Bugs: User can add empty product writing no information on form.
+AdminPanelAppendAdmin.php:
+	It is the another tab page that the admin can create another admin with username, password and authority information. There are two authority those are super admin 
+and admin. Only super admins can create another admin. The root is an admin with super admin privilege.
 
-Program Working Process:Firstly the index.html file is connected with mobilePhone.js and index.css file. index.css file includes design informations and mobilePhone.js file includes script functions and class. 
-Then, program prints basic elements with individual ids to append other elements and these basic elements is connected css file to take design information. Some elements' visibility are hidden by default 
-such as new product form. Finally, there is script tag to add default products.
+firstPage.php:
+	First page creates database named mobilephonedb. This page should be called before any web page calling. There is a button that creates all
+database and enters initial datas into the database. Then, it directs user to the index.php page.
 
+index.php:
+	It is a main page of all site for users. It presents all products to users. All products comes from mobilephonedb database and are put to a javascript object by encoding json format.
+Then with the help of a for loop, all json format data are pushed to phoneList array to use later. After the for loop, in another for loop, placedBest() and placedProduct() functions are called
+to place product in html elements.
+
+logOut.php:
+	It cleans all sessions and directs admin to adminLogin.php page.
+
+logOutUser.php:
+	It cleans all sessions and directs user to userLogin.php page.
+
+mobilePhone.js
+	There is a class named phone. It keeps brand, model screen features, camera, CPU, RAM, memory, battery, os, extra features, old price, 
+price, picture address informations of phones that are taken from database. The class has getter methods for all variables. Also there are some 
+funtions named placedBest(), placedProduct(), addToBasket(). All placed methods are created to place all product to manipulated places. 
+They create some element such as "div", "ul", "button"... and atributes such as "class","id" and they are appended as child each other. 
+addToBasket() method also creates shopping basket elements and attributes, then appended as child each other.
+
+userLogin.php:
+	userLogin.php file is similer with adminLoin.php but there is a difference that userLogin.php checks correction of information at the same page. 
+The are user name, password input and a submit button in a form.
+
+userProfil.php:
+	Users views and can change their information in this page. If there is an input to change information, the input is checked whether valid or not. 
+There is a function named cleanProcess() that cleans first and last spaces of input if exists.
+
+userRegister.php:
+	New user can register in this page. There is a form and inputs that are checked whether valid or not. Also, because user name is unique, entered user name
+is checked with the help of isUserExist() function that returns boolen result. There is cleanProcess() function in it, too.
+
+styles/adminStyle.css:
+	It is a style css file that is used by adminPanel.php, adminPanelAppend.php and adminPanelAppendAdmin.php file.
+
+styles/indexStyle.css
+	It is a style css file that is used by index.php file.
+
+styles/profilStyle.css
+	It is a style css file that is used by userProfil.php file.
+
+styles/registerStyle.css
+	It is a style css file that is used by adminLogin.php, userLogin.php and userRegister.php file.
+
+Database	Tables  Attributes(type)
+mobilephonedb---admins
+	      |  |_authority(enum)
+	      |  |_password(varchar)
+	      |  |_user_name(Primary Key)(varchar)
+              |
+              |  
+	      |_products
+              |  |_id(Primary Key)(int)
+              |  |_battery(int)
+              |  |_brand(varchar)
+              |  |_camera(int)
+              |  |_cpu(varchar)
+              |  |_extra(varchar)
+              |  |_memory(int)
+              |  |_model(varchar)
+              |  |_old_price(int)
+              |  |_os(varchar)
+              |  |_picture_adress(varchar)
+              |  |_price(int)
+              |  |_ram(int)
+              |  |_screen(varchar)
+              |  
+              |  
+	      |_users
+                 |_id(Primary Key)(int)
+                 |_email(varchar)
+                 |_gender(varchar)
+                 |_name(varchar)
+                 |_password(varchar)
+                 |_surname(varchar)
+                 |_user_name(Uniq,varchar)
+                 |_web_site(varchar)
+                 |_year(int)
+
+
+Bugs: Admin can add empty product writing no information on form. If index.php or any page is opened before firstPage.php web page that creates database, 
+any page relevant database cannot be run properly. Firstly, firstPage.php file should run.
+
+Sample Outputs: Sample output screenshots and visual database diagram are under outputs/ directory. 
