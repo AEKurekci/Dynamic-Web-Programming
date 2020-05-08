@@ -30,9 +30,9 @@
             echo "Table admins created successfully<br>";
 
             $sqlInsertDefaultAdmin = "INSERT INTO `admins` (`user_name`, `password`, `authority`) VALUES
-            ('root', '7b24afc8bc80e548d66c4e7ff72171c5', 'super_admin')";
+            ('admin', '21232f297a57a5a743894a0e4a801fc3', 'super_admin')";
             $conn->exec($sqlInsertDefaultAdmin);
-            echo "root admin is inserted successfully<br>";
+            echo "super admin is inserted successfully<br>";
 
             $sqlProductTableCreate = "CREATE TABLE `products` (
                 `id` int(11) NOT NULL,
@@ -82,7 +82,7 @@
             echo "Table users created successfully<br>";
 
             $sqlInsertDefaultUsers = "INSERT INTO `users` (`id`, `name`, `surname`, `year`, `email`, `user_name`, `password`, `web_site`, `gender`) VALUES
-            (1, 'Ali Emre', 'Kürekci', 1997, 'aliemrekurekci@posta.mu.edu.tr', 'AEKurekci', 'c337415f941093f8416242495aa4c1cd', 'https://www.deneme.com', 'male')";
+            (1, 'Ali Emre', 'Kürekci', 1997, 'admin@posta.mu.edu.tr', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'https://www.deneme.com', 'male')";
 
             $conn->exec($sqlInsertDefaultUsers);
             echo "Default users are inserted successfully<br>";
@@ -127,9 +127,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create DataBase</title>
+    <link rel="stylesheet" href="styles/adminStyle.css"
 </head>
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
+        <p>Opps You haven't relevant database. Let's create!</p>
         <input type="submit" value="Create Database and Go Index.php">
     </form>
 </body>

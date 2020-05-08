@@ -7,8 +7,20 @@
     $db = "mobilephonedb";
     
     try{
-        $connect = new PDO("mysql:host=$server;dbname=$db",$userName,$password);
-        $connect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        $connect = new PDO("mysql:host=$server", $userName, $password);
+        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sqlIsDBExist = "SHOW DATABASES LIKE '$db'";
+            
+        $isExist = $connect->query($sqlIsDBExist);
+        $row = $isExist->fetch();
+        if($row > 0){
+            $connect = null;
+            $connect = new PDO("mysql:host=$server;dbname=$db",$userName,$password);
+            $connect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        }
+        else{
+            header("Location:firstPage.php");
+        }
     } 
     catch(PDOException $ex){
         print "Connection Failed" . $ex->getMessage();
@@ -121,7 +133,6 @@
             $productLength = count($products);
             $connect = null;
         ?>
-        console.log(products[0].brand);
         
         var counter = 0;
         var productLength = <?php echo $productLength ?>;
